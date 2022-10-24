@@ -1,0 +1,53 @@
+{
+  "areas": [
+    {
+      "id": 1,
+      "nombreArea": "Finanzas",
+      "nombreEncargado": "Jose Linares",
+      "numeroFuncionarios": 4
+    },
+    {
+      "id": 2,
+      "nombreArea": "Legal",
+      "nombreEncargado": "Fernando Alvarez Mendieta",
+      "numeroFuncionarios": 2
+    }
+  ],
+  "activos": [
+    {
+      "id": 1,
+      "marca": "HP",
+      "modelo": "Pavilion 360",
+      "estado": "usado",
+      "areaId": 1
+    },
+    {
+      "id": 2,
+      "marca": "Acer",
+      "modelo": "acer 1234",
+      "estado": "usado",
+      "areaId": 2
+    },
+    {
+      "id": 3,
+      "marca": "Epson",
+      "modelo": "L380",
+      "estado": "usado",
+      "areaId": 1
+    },
+    {
+      "id": 4,
+      "marca": "Epson",
+      "modelo": "L380 Old",
+      "estado": "usado",
+      "areaId": 2
+    },
+    {
+      "id": 5,
+      "marca": "Toyota",
+      "modelo": "Land Cruiser",
+      "estado": "desuso",
+      "areaId": 2
+    }
+  ]
+}
