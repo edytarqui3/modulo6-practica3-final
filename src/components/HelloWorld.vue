@@ -2,31 +2,22 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      PRACTICA 3 Final Vue
+      
     </p>
-    <h3>Installed CLI Plugins</h3>
+    <h3>Enunciado: La Empresa F&F requiere un sistema de inventario de activos por área con las siguientes características: Se pide realizar los mismos pasos pedidos en la practica3, esta vez usando Vue3 o Vue2.</h3>
     <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
+      <li>Registrar áreas. se deben registrar las áreas o departamentos de la empresa, los datos a registrar son:
+Nombre del área o departamento ejm: finanzas, legal, Informática
+Nombre del encargado. ejm: Jose Linares
+Número de funcionarios. ejemplo: 4</li>
+      <li>Registrar los activos: se deben registrar los activos de cada área para ello se deben guardar los siguientes datos:
+Tipo de activo. se debe guardar la clasificación del activo ejem: computadora
+Marca ejemplo: HP
+Modelo ejemplo: pavilion 360
+Estado: puede ser nuevo, usado, en desuso
+areaId para guardar la relación con un área</li>
+      <li>Debe contar con un buscador de producto por tipo Debe contar con un filtro por estado</li>
     </ul>
   </div>
 </template>

@@ -36,15 +36,15 @@
        </div>
 
        <div class="table-responsive">
-            <table class="table table-sm">
+            <table class="table table-sm styled-table">
                 <thead>
                     <tr>
-                        <th scope="col">Id Activo</th>
+                        <th >Id Activo</th>
                         <th scope="col">Marca</th>
                         <th scope="col">Modelo</th>
                         <th scope="col">Estado</th>
                         <th scope="col">Id del Area</th>
-
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <!-- <tbody v-for="(value) in activos"> -->

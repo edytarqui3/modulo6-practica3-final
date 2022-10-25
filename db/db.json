@@ -4,13 +4,13 @@
       "id": 1,
       "nombreArea": "Finanzas",
       "nombreEncargado": "Jose Linares",
-      "numeroFuncionarios": 4
+      "numeroFuncionarios": 3
     },
     {
       "id": 2,
       "nombreArea": "Legal",
       "nombreEncargado": "Fernando Alvarez Mendieta",
-      "numeroFuncionarios": 2
+      "numeroFuncionarios": 5
     }
   ],
   "activos": [

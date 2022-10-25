@@ -23,13 +23,14 @@
        </form> 
 
         <div class="table-responsive">
-            <table class="table table-sm">
+            <table class="table table-sm styled-table">
                 <thead>
                     <tr>
                         <th scope="col">Id Area</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Encargado</th>
                         <th scope="col">Numero de funcionarios</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody v-for="(value) in areas">
@@ -71,7 +72,6 @@
                 data: this.areaActual
             })
                 .then(response => {
-                    console.log(response);
                     this.areaActual.nombreArea = null;
                     this.nombreEncargado = null;
                     this.numeroFuncionarios = null;
@@ -86,7 +86,6 @@
                 })
                 .then(response => {
                     this.areas = response.data;
-                    console.log(response);
                 })
                 .catch(e => {
                     console.log(e);
@@ -106,7 +105,6 @@
                         })
                         .then(response => {
                             this.getAreas();
-                            console.log(response);
                         })
                         .catch(e => console.log(e));
                     }
