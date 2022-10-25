@@ -89,7 +89,7 @@
             getAreas() {
                 axios({
                     method: "get",
-                    url: "http://localhost:3000/areas"
+                    url: "http://localhost:3000/areas/?q="
                 })
                 .then(response => {
                     this.areas = response.data;
