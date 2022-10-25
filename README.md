@@ -32,7 +32,7 @@ Debe contar con un filtro por estado
 -  vue create modulo6-practica3-final
 
 
-## Ejecucion de json-server servidor local de la base productos
+## Ejecucion de json-server servidor local de la base activos , areas o departamentos
 - npm install -g json-server
 - npx json-server --watch db/db.json
 

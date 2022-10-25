@@ -4,6 +4,7 @@
 
         <form @submit.prevent="agregarActivo()">
             <h5>Agregar Activo</h5>
+            
             <div class="input-group mb-3">
                 <input type="text" class="form-control" v-model="activoActual.marca" placeholder="Marca"
                     aria-describedby="button-addon2">
@@ -13,6 +14,7 @@
                     aria-describedby="button-addon2">
                 <input type="number" class="form-control" v-model="activoActual.areaId" placeholder="Id del Area"
                     aria-describedby="button-addon2" min="1" max="1000">
+                    <v-select :options="options"></v-select>
                 <button class="btn btn-outline-secondary" type="submit">Agregar</button>
             </div>
         </form>
@@ -76,10 +78,26 @@
                     estado: null,
                     areaId: null
                 },
-                activos: []
+                activos: [],
+                entrada_modal:false,
+                entrada_loading:false,
+                showModal: false,
+                areas: [ ]
             }
         },
         methods: {
+            getAreas() {
+                axios({
+                    method: "get",
+                    url: "http://localhost:3000/areas"
+                })
+                .then(response => {
+                    this.areas = response.data;
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+            },
             agregarActivo() {
                 console.log(this.activoActual);
                 axios({
@@ -88,7 +106,6 @@
                 data: this.activoActual
             })
                 .then(response => {
-                    console.log(response);
                     this.activoActual.marca = null;
                     this.activoActual.modelo = null;
                     this.activoActual.estado = null;
@@ -150,6 +167,7 @@
             }
         },
         mounted() {
+            this.getAreas()
             this.getActivos();
         },
         components: {

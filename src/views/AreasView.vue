@@ -60,7 +60,7 @@
                     nombreEncargado: null,
                     numeroFuncionarios: null
                 },
-                areas: []
+                areas: [],
             }
         },
         methods: {

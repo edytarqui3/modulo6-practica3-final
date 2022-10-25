@@ -13,11 +13,21 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Estado (nuevo, usado, desuso):</label>
-                    <input type="text" v-model="activo.estado" class="form-control">
+                    <!-- input type="text" v-model="activo.estado" class="form-control"-->
+                    <select v-model="activo.estado" class="form-control">
+                        <option>nuevo</option>
+                        <option>usado</option>
+                        <option>desuso</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Id del Area:</label>
-                    <input type="number" v-model="activo.areaId" class="form-control" min="1" max="1000">
+                    <!--input type="number" v-model="activo.areaId" class="form-control" min="1" max="1000" -->
+                    <select v-model="activo.areaId"  class="form-control">
+                        <option v-for="option in areas" :value="option.id">
+                            {{ option.nombreArea }}
+                        </option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary m-2">Guardar</button>
                 <button class="btn btn-light m-2">Cancelar</button>
@@ -36,10 +46,28 @@
                     modelo: null,
                     estado: null,
                     areaId: null
-                }
+                },
+                estado: [
+                'nuevo',
+                'usado',
+                'desuso'
+                ],
+                areas: []
             }
         },
         methods: {
+            getAreas() {
+                axios({
+                    method: "get",
+                    url: "http://localhost:3000/areas"
+                })
+                .then(response => {
+                    this.areas = response.data;
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+            },
             getActivo(){
                 axios({
                     method: "get",
@@ -72,6 +100,7 @@
         },
         mounted() {
             this.getActivo()
+            this.getAreas()
         },
         components: {
         }
